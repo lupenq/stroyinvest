@@ -1,0 +1,58 @@
+@import "colors"
+html
+    font-size: 14px
+
+body
+    background-color: $body-bg
+    color: $dark
+    font-family: "Roboto", sans-serif
+a
+    color: $active
+.top-nav
+    background-color: $white
+    padding: 15px
+    &_menu
+        display: flex
+        list-style: none
+        padding: 0
+        li
+            margin-right: 45px
+            a
+                text-decoration: none 
+                text-transform: uppercase
+                color: $dark
+                &::after
+                    content: ""
+                    display: block
+                    width: 100%
+                    height: 2px
+                    background-color: $active
+                    transform: translateY(37px) scale(0)
+                    transition: all 0.2s
+                &:hover
+                    text-decoration: none
+                    &::after
+                        transform: translateY(37px) scale(1)
+.left-sidebar
+    margin-top: 40px
+    &_menu
+        background-color: $white
+        padding: 0
+        list-style: none
+        li
+            a
+                display: block
+                text-decoration: none
+                font-size: 16px
+                font-weight: 400
+                color: $dark
+                padding: 15px 29px
+                &:hover
+                    background-color: $active
+                    color: $white
+                    transition: all 0.1ss
+    &_object
+        background-color: $white
+        margin-top: 30px
+    &_description
+        padding: 30px
