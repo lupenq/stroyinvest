@@ -1,0 +1,43 @@
+@media (max-width: 480px)
+    .top-nav
+        &_btn
+            display: block
+            cursor: pointer
+        &_menu
+            flex-direction: column
+            display: none
+            margin-bottom: 0
+            li
+                line-height: 2
+                a
+                    &::after
+                        display: none
+            &__active
+                display: flex
+                margin-bottom: 0
+    .left-sidebar
+        margin-top: 15px
+        &_btn
+            display: block
+        &_menu
+            display: none
+            &__active
+                display: block
+        &_object
+            display: none
+    .direction
+        margin-bottom: 100px
+    .footer
+        .copy
+            text-align: center
+            .disclaimer
+                margin-top: 20px
+        &_menu
+            ul
+                padding-left: 15px
+        .footer-contacts
+            text-align: center
+        .social-btn
+            text-align: center
+        ul
+            padding: 0

@@ -4,6 +4,7 @@
     <title>СтройИнвест</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap-grid.css">
@@ -13,6 +14,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
+
   <body>
     <div class="container">
         <div class="top-nav">
@@ -23,6 +25,9 @@
                     </div>
                 </div>
                 <div class="col-md-auto">
+                    <button class="top-nav_btn">
+                        <i class="icon-menu"></i>
+                    </button>
                         <ul class="top-nav_menu">
                             <li><a href="#">Главная</a></li>
                             <li><a href="#">О компании </a></li>             
@@ -36,7 +41,10 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <div class="left-sidebar">
+                <div class="left-sidebar"> 
+                    <div class="left-sidebar_btn">
+                        Категории
+                    </div>
                         <ul class="left-sidebar_menu">
                             <li><a href="#">Земля</a></li>
                             <li><a href="#">Жилая недвижимость</a></li>
@@ -105,7 +113,7 @@
                         <small class="disclaimer">Но как можно было спокойно спать под этот сотрясающий мебель трезвон? Ну, спал-то он неспокойно, но, видимо, крепко. Однако что делать теперь? Следующий поезд уходит в семь часов; чтобы поспеть на него, он должен отчаянно торопиться, а набор образцов.</small>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-6">
                     <div class="footer_menu">
                         <ul>
                             <li><a href="#">Главная</a></li>
@@ -117,7 +125,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">                
+                <div class="col-md col-6">                
                     <div class="footer_menu">
                         <ul>
                             <li><a href="#">Земля</a></li>
@@ -152,14 +160,48 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script src="slick/slick.min.js"></script>
-    <script>$('.direction-blocks').slick({
+    <script>
+    $('.direction-blocks').slick({
         arrows: false,
         dots: true,
-        slidesToShow: 4
-    });</script>
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        responsive: [
+    {
+        breakpoint: 768,
+        settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+        }
+    }
+    ]
+});
+    </script>
+    <script>
+        $(document).ready(function() {
+            var menuBtn = $('.top-nav_btn');
+            var menu = $('.top-nav_menu');
+            var sidebarBtn = $('.left-sidebar_btn');
+            var sidebarMenu = $('.left-sidebar_menu');
+            
+            // menuBtn.on('click', function(event) {
+            //     menu.toggleClass('top-nav_menu__active');
+            // });
+            $(menuBtn).click(function(){
+            $(menu).slideToggle();
+            });
+            // sidebarBtn.on('click', function(event) {
+            //     sidebarMenu.toggleClass('left-sidebar_menu__active');
+            // });
+            $(".left-sidebar_btn").click(function(){
+            $(".left-sidebar_menu").slideToggle();
+            });
+        });
+    </script>
   </body>
 </html>

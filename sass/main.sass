@@ -1,6 +1,7 @@
 @import "colors"
 @import "reset"
 @import "fontello"
+
 html
     font-size: 14px
 
@@ -14,6 +15,18 @@ a
 .top-nav
     background-color: $white
     padding: 15px
+    position: relative
+    &_btn
+        display: none
+        text-align: center
+        width: 30px
+        height: 30px
+        background-color: transparent
+        border: none
+        font-size: 18px
+        position: absolute
+        right: 15px
+        top: -50px
     &_menu
         display: flex
         list-style: none
@@ -38,6 +51,25 @@ a
                         transform: translateY(37px) scale(1)
 .left-sidebar
     margin-top: 40px
+    &_btn
+        display: none
+        background-color: $white
+        padding: 15px
+        position: relative
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            margin-top: -10px
+            right: 15px
+            width: 15px
+            height: 15px
+            border-bottom: 2px solid $dark
+            border-right: 2px solid $dark
+            transform: rotate(45deg)
+        &:hover
+            cursor: pointer
     &_menu
         background-color: $white
         padding: 0
@@ -53,7 +85,7 @@ a
                 &:hover
                     background-color: $active
                     color: $white
-                    transition: all 0.1ss
+                    transition: all 0.15s
     &_object
         background-color: $white
         margin-top: 30px
@@ -91,7 +123,7 @@ a
         margin: 15px 15px
         background-position: bottom center
         background-repeat: no-repeat
-        background-size: 170px auto
+        background-size: auto auto
     h3
         color: $active
         font-size: 14px
@@ -128,7 +160,7 @@ a
         li
             font-size: 14px
             font-weight: 400
-            line-height: 32px
+            line-height: 27px
     .footer-contacts
         text-align: right
         .phone
@@ -143,7 +175,7 @@ a
         .mail
             @extend .adress
     .social-btn
-        @extend .footer-contacts
+        text-align: right
         li
             display: inline-block
             a
@@ -158,3 +190,5 @@ a
                 &:hover
                     background-color: rgba($white, 0.9)
                     color: $dark
+
+@import "media"
