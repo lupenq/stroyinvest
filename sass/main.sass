@@ -1,4 +1,5 @@
 @import "colors"
+@import "reset"
 html
     font-size: 14px
 
@@ -56,3 +57,42 @@ a
         margin-top: 30px
     &_description
         padding: 30px
+.btn
+    display: inline-block
+    padding: 20px 30px
+    background-color: $active
+    color: $white
+    text-decoration: none
+    border-bottom: 5px solid darken($active, 10%)
+    border-radius: 5px
+    font-size: 16px
+    font-weight: 700
+    margin-top: 40px
+    &:hover
+        background-color: lighten($active, 5%)
+.content
+    margin-top: 40px
+    color: $dark
+    h2
+        color: $dark
+        font-size: 24px
+        font-weight: 700
+        line-height: 33px
+.direction
+    margin-top: 80px
+    height: 220px
+    &-block
+        text-align: center
+        height: 220px
+        background-color: $white
+        padding: 10px
+        margin: 15px 15px
+        background-position: bottom center
+        background-repeat: no-repeat
+        background-size: 170px auto
+    h3
+        color: $active
+        font-size: 14px
+        font-weight: 400
+    .slick-slide
+        height: 220px

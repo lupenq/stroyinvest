@@ -1,3 +1,7 @@
+.slick-active {
+  outline: none !important;
+}
+
 html {
   font-size: 14px;
 }
@@ -78,4 +82,54 @@ a {
 }
 .left-sidebar_description {
   padding: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px 30px;
+  background-color: #009adf;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 5px solid #0077ac;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+.btn:hover {
+  background-color: #00acf9;
+}
+
+.content {
+  margin-top: 40px;
+  color: #131313;
+}
+.content h2 {
+  color: #131313;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+}
+
+.direction {
+  margin-top: 80px;
+  height: 220px;
+}
+.direction-block {
+  text-align: center;
+  height: 220px;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 15px 15px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 170px auto;
+}
+.direction h3 {
+  color: #009adf;
+  font-size: 14px;
+  font-weight: 400;
+}
+.direction .slick-slide {
+  height: 220px;
 }
