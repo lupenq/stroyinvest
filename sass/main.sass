@@ -1,5 +1,6 @@
 @import "colors"
 @import "reset"
+@import "fontello"
 html
     font-size: 14px
 
@@ -7,6 +8,7 @@ body
     background-color: $body-bg
     color: $dark
     font-family: "Roboto", sans-serif
+    margin: 0
 a
     color: $active
 .top-nav
@@ -96,3 +98,63 @@ a
         font-weight: 400
     .slick-slide
         height: 220px
+.footer
+    background-color: $dark
+    margin-top: 60px
+    color: $footer-color
+    padding: 50px 0
+    a
+        text-decoration: none
+        color: $footer-color
+        &:hover
+            color: $white
+    .copyright
+        font-size: 14px
+        font-weight: 400
+        line-height: 20px
+        margin-bottom: 12px
+    .policy
+        font-size: 12px
+        font-weight: 400
+        line-height: 20px
+    .disclaimer
+        display: block
+        font-size: 10px
+        font-weight: 400
+        line-height: 16px
+        margin-top: 55px
+    ul
+        list-style: none
+        li
+            font-size: 14px
+            font-weight: 400
+            line-height: 32px
+    .footer-contacts
+        text-align: right
+        .phone
+            color: $active
+            font-size: 20px
+            font-weight: 700
+            line-height: 20px
+        .adress
+            font-size: 14px
+            font-weight: 400
+            line-height: 20px
+        .mail
+            @extend .adress
+    .social-btn
+        @extend .footer-contacts
+        li
+            display: inline-block
+            a
+                display: inline-block
+                text-align: center
+                background-color: rgba($white, 0.1)
+                height: 42px
+                width: 42px
+                border-radius: 50%
+                line-height: 42px
+                margin-left: 15px
+                &:hover
+                    background-color: rgba($white, 0.9)
+                    color: $dark
